@@ -8,10 +8,10 @@
   <form name="form1" action="" method = "POST">
   <h2>Welcome to Login System</h2>
   帳號:
-  <input type = "text" name = "UserId">
+  <input type = "text" name = "UserId" required>
   <br/>
   密碼:
-  <input type = "password" name = "password">
+  <input type = "password" name = "password" required>
   <br/>
     <input type="button" value="登入" type="submit" onclick="form1.action='login.jsp';form1.submit();"/>
     <input type="button" value="註冊" type="submit" onclick="self.location.href='create.html'" />
