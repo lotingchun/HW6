@@ -25,6 +25,7 @@
     String name=rs.getString("name") ;
     String birthday=rs.getString("birthday") ;
     String memo=rs.getString("memo") ; %>
+
     <h3 class="box-title">登入成功</h3>
     <p>帳號：<%=UserId%></p>
     <p>用戶姓名：<%=name%></p>
@@ -32,12 +33,20 @@
     <p>生日：<%=birthday%></p>
     <p>memo：<%=memo%></p>
     <button class="btn btn-primary" onclick="window.open('index.html','_self')">回到上一頁</button>
-            <%}}}} else{ %>
+            <% }else{ %>
+              <h2>可能打錯帳密喔!!</h2>
+              <button class="btn btn-primary" onclick="window.open('index.html','_self')">回到上一頁</button>
+              <p>還沒有帳號嗎↓</p>
+              <button class="btn btn-primary" onclick="window.open('create.html','_self')">創立新帳號</button>
+            <%}
+          }}}
+           if(UserId.equals("")||password.equals("")){
+           %>
+           <h2>可能打錯帳密喔!!</h2>
+           <button class="btn btn-primary" onclick="window.open('index.html','_self')">回到上一頁</button>
+           <p>還沒有帳號嗎↓</p>
+           <button class="btn btn-primary" onclick="window.open('create.html','_self')">創立新帳號</button>
+           <%}%>
 
-      <h2>可能打錯帳密喔!!</h2>
-      <button class="btn btn-primary" onclick="window.open('index.html','_self')">回到上一頁</button>
-      <p>還沒有帳號嗎↓</p>
-      <button class="btn btn-primary" onclick="window.open('create.html','_self')">創立新帳號</button>
-<%}%>
 </BODY>
 </HTML>
