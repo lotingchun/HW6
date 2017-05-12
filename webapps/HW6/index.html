@@ -2,6 +2,30 @@
   <head>
     <meta charset="utf-8">
     <title>Login System</title>
+    <SCRIPT LANGUAGE="javascript">
+function myFunction() {
+    var password = prompt("請輸入密碼(管理者密碼:123)","")
+    if (password=="123")
+    {
+    alert('Welcome!')
+    location.href='search.jsp'
+    }
+    else
+    {
+    if (password=="null")
+    {
+    alert('請再輸入一次密碼');
+    location.href='index.html';
+    }
+    else
+    if (password!="123")
+    {
+    alert('請再輸入一次密碼');
+    location.href='index.html';
+    }
+  }
+}
+    </SCRIPT>
   </head>
   <body>
     <center>
@@ -15,6 +39,8 @@
   <br/>
     <input type="button" value="登入" type="submit" onclick="form1.action='login.jsp';form1.submit();"/>
     <input type="button" value="註冊" type="submit" onclick="self.location.href='create.html'" />
+    <input type="button" value="查詢" type="submit" onclick="myFunction()"/ >
+
   </form>
 </center>
   </body>

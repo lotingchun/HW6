@@ -28,6 +28,7 @@ public class Database{
   public void query(String sql){
     try{
       rs = stmt.executeQuery(sql);
+    
     }catch(Exception ex){
       System.out.println(ex);
     }

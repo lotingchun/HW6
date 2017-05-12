@@ -16,7 +16,7 @@
 %>
 <HTML>
 <HEAD><TITLE>登入畫面</TITLE></HEAD>
-<BODY>
+<BODY >
   <% if(rs !=null){
     while(rs.next()){
     if(UserId.equals(rs.getString("UserId"))){
