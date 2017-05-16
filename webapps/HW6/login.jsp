@@ -40,13 +40,8 @@
               <button class="btn btn-primary" onclick="window.open('create.html','_self')">創立新帳號</button>
             <%}
           }}}
-           if(UserId.equals("")||password.equals("")){
            %>
-           <h2>可能打錯帳密喔!!</h2>
-           <button class="btn btn-primary" onclick="window.open('index.html','_self')">回到上一頁</button>
-           <p>還沒有帳號嗎↓</p>
-           <button class="btn btn-primary" onclick="window.open('create.html','_self')">創立新帳號</button>
-           <%}%>
+
 
 </BODY>
 </HTML>
