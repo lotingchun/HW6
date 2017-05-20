@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>註冊畫面</title>
+
+    <%-- <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> --%>
   </head>
   <body>
-    <center>
+    <div class="container">
+      <div class="top">
+      </div>
+      <div class="login-box animated fadeInUp">
+        <div class="box-header">
+          <h3>請輸入資料</h3>
+          </div>
     <form name="form1" action="create.jsp" method = "Ppost">
-      <h3>請輸入資料</h3>
-    帳號：<input type = "text" name = "UserId"  required><br>
-    用戶姓名：<input type = "text" name = "name"  required><br>
-    密碼：<input type = "password" name = "password"  required><br>
-    生日：<input type="date" name="birthday"  required><br>
-    memo：<input type="text" name="memo"  required><br><br>
-    <input type="submit" value="註冊">
-  </form>
-</center>
+    <label for="UserId">帳號：</label><input type = "text" name = "UserId"  required><br>
+    <label for="UserId">用戶姓名：</label><input type = "text" name = "name"  required><br>
+    <label for="UserId">密碼：</label><input type = "password" name = "password"  required><br>
+    <label for="UserId">生日：</label> <input type="date" name="birthday"  required><br>
+    <label for="UserId">memo：</label><input type="text" name="memo"  required><br><br>
+    <button type="submit">註冊</button>
+</form>
+  </div>
+</div>
+
   </body>
 </html>

@@ -27,7 +27,29 @@
     }
 %>
 <HTML>
-<HEAD><TITLE>註冊</TITLE></HEAD>
+<HEAD><TITLE>註冊</TITLE>
+<style>
+body {
+  background: url("images/photo1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  color: 	#000000;
+}
+.btn-primary{
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+}
+
+.btn-primary:hover {
+    background-color:white;
+    color:black;
+}
+</style>
+</HEAD>
 <BODY>
       <h4 class="page-title"><%=message%></h4> </div>
       帳號：<%=UserId%><br>

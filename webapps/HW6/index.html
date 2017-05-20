@@ -1,14 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Login System</title>
+
+    <!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
     <SCRIPT LANGUAGE="javascript">
 function myFunction() {
     var password = prompt("請輸入密碼(管理者密碼:123)","")
     if (password=="123")
     {
-    alert('Welcome!')
-    location.href='search.jsp'
+    alert('Welcome!');
+    location.href='search.jsp';
     }
     else
     {
@@ -28,20 +39,49 @@ function myFunction() {
     </SCRIPT>
   </head>
   <body>
-    <center>
-  <form name="form1" action="login.jsp" method = "POST">
-  <h2>Welcome to Login System</h2>
-  帳號:
-  <input type = "text" name = "UserId"  required>
-  <br/>
-  密碼:
-  <input type = "password" name = "password" required>
-  <br/>
-    <input type="submit" value="登入" />
-    <input type="button" value="註冊"  onclick="self.location.href='create.html'" />
-    <input type="button" value="查詢"  onclick="myFunction()"/ >
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">HELLO <span>YOU</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Log In</h2>
+			</div>
+      <form name="form1" action="login.jsp" method = "POST">
+			<label for="UserId">UserId</label>
+			<br/>
+			<input type="text" name="UserId" required>
+			<br/>
+			<label for="password">Password</label>
+			<br/>
+			<input type="password" name="password" required>
+			<br/>
+      <button type="submit">登入</button>
+      <button onclick="myFunction()">查詢</button>
+			<br/>
+			<a href="create.html"><p class="small">註冊</p></a>
+      </form>
+		</div>
+	</div>
+</body>
 
-  </form>
-</center>
-  </body>
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="UserId"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="UserId"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
+
 </html>

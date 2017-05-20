@@ -17,6 +17,15 @@
 <HEAD><TITLE>查詢畫面</TITLE>
 
 <style>
+body {
+	background: url("images/photo1.jpg") no-repeat center center fixed;
+	background-size: cover;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	margin: 0;
+	color: 	#000000;
+}
 table {
     border-collapse: collapse;
     width: 100%;
@@ -27,11 +36,21 @@ th, td {
     padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){background-color: #00AA55}
 
 th {
     background-color: #4CAF50;
     color: white;
+}
+.btn-primary{
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+}
+
+.btn-primary:hover {
+    background-color:white;
+    color:black; 
 }
     </style>
 </HEAD>
