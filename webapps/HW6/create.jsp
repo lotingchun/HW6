@@ -18,13 +18,14 @@
   String birthday = request.getParameter("birthday");
   String memo=request.getParameter("memo");
   String message="";
+
   if(UserId != null && name != null && password != null && birthday != null&& birthday != memo){
     database.connectDB();
     database.insertData(UserId,name,password,birthday,memo);
     message="註冊成功";
     }else{
     message="註冊失敗";
-    }
+  }
 %>
 <HTML>
 <HEAD><TITLE>註冊</TITLE>
